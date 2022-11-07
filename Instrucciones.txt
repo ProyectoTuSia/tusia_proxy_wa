@@ -1,0 +1,18 @@
+Crear la imagen:
+docker build -t tusia_proxy_wa .
+
+Correr contenedor con la imagen (detached):
+docker run -p 80:80 -d --name tusia_proxy_wa tusia_proxy_wa
+
+Acceder a la consola del contenedor por si se quieren ver logs:
+docker exec -it tusia_proxy_wa bash
+
+cd log
+
+Para accesos:
+cat nginx.access.log 
+Para errores:
+cat nginx.access.log
+
+Salir de la consola del contenedor:
+ctrl+d
